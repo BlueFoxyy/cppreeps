@@ -4,13 +4,16 @@ mkdir -p dist
 mkdir -p build
 
 em++                                \
-    --std=c++11                     \
-    --bind                          \
-    -s WASM=1                       \
-    -s MODULARIZE=1                 \
-    -s ALLOW_MEMORY_GROWTH=1        \
+    --std=c++20                     \
+    --no-entry                      \
+    -lembind                        \
+    --pre-js pre_js.js              \
+    --post-js post_js.js            \
+    -sWASM_ASYNC_COMPILATION=0      \
+    -sENVIRONMENT=shell             \
+    -sSTRICT                        \
     -Iinclude -Ilib                 \
-    -O3 -Wall -pedantic             \
+    -O3 -Werror -Wall -pedantic     \
         src/loop.cpp                \
     -o build/loop.js
 
