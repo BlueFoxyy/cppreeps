@@ -3,13 +3,13 @@
 #include <emscripten/bind.h>
 
 /// Main Screeps-CPP API
-#include <cppreeps.hpp>
+#include "cppreeps.hpp"
 
 /// Exporting lzw_xxcode() to current module
-#include <lzw.hpp>
+#include "lzw.hpp"
 
 void loop() {
-    using namespace utils;
+    using namespace js_utils;
     using namespace screeps;
     
     INIT();

@@ -14,7 +14,7 @@
 
 #define LOG_HEAD "[cppreeps]: "
 
-namespace utils {
+namespace js_utils {
     
     using val = emscripten::val;
     
@@ -68,7 +68,7 @@ namespace utils {
 
 namespace screeps {
     
-    using namespace utils;
+    using namespace js_utils;
     
     struct tick_t {
         val Game        = get_global("Game");

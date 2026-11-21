@@ -1,3 +1,6 @@
+[submodule "lib/screepsxx"]
+	path = lib/screepsxx
+	url = https://github.com/BlueFoxyy/screepsxx
 [submodule "lib/lzw"]
 	path = lib/lzw
-	url = https://github.com/Mototroller/ax.lzw.git
+	url = https://github.com/Mototroller/ax.lzw
